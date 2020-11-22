@@ -135,3 +135,34 @@ employees
 group by employees.last_name 
 order by "Employees" DESC
 
+
+--Employee number 499942
+
+
+SELECT *
+FROM employees e
+inner join titles t
+on e.emp_title_id=t.title_id
+	inner join salaries s
+	on e.emp_no=s.emp_no
+		inner join dept_emp de
+		on e.emp_no=de.emp_no
+			inner join departments d
+			on de.dept_no=d.dept_no
+				inner join dept_manager dm
+				on d.dept_no=dm.dept_no
+			where e.emp_no= 499942
+			
+SELECT *
+FROM employees e
+where e.emp_no =110511
+or e.emp_no =110567
+
+	
+	
+WHERE film_id IN
+(
+  SELECT film_id
+  FROM film
+  WHERE title = 'EARLY HOME'
+);
