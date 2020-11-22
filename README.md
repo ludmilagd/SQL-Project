@@ -1,81 +1,47 @@
 
 SQL Challenge 
 
-Objective: Research projects of Pewlett Hackard  from 1980 to 2000 and analyze data to answer questions below. 
+Objective: Research projects of PewlettÂ Hackard  from 1980 to 2000 and analyze data to answer questions below. 
 
-#### Data Modeling
+In the present analysis there is a data modeling diagram with the relationship between the tables in the database
 
-Inspect the CSVs and sketch out an ERD of the tables. Feel free to use a tool like [http://www.quickdatabasediagrams.com](http://www.quickdatabasediagrams.com).
+####Â DataÂ Analysis
 
-#### Data Engineering
+Questions about employee's:
 
-* Use the information you have to create a table schema for each of the six CSV files. Remember to specify data types, primary keys, foreign keys, and other constraints.
+1.Â ListÂ theÂ followingÂ detailsÂ ofÂ eachÂ employee:Â employeeÂ number,Â lastÂ name,Â firstÂ name,Â sex,Â andÂ salary.
 
-  * For the primary keys check to see if the column is unique, otherwise create a [composite key](https://en.wikipedia.org/wiki/Compound_key). Which takes to primary keys in order to uniquely identify a row.
-  * Be sure to create tables in the correct order to handle foreign keys.
+2.Â ListÂ firstÂ name,Â lastÂ name,Â andÂ hireÂ dateÂ forÂ employeesÂ whoÂ wereÂ hiredÂ inÂ 1986.
 
-* Import each CSV file into the corresponding SQL table. **Note** be sure to import the data in the same order that the tables were created and account for the headers when importing to avoid errors.
+3.Â ListÂ theÂ managerÂ ofÂ eachÂ departmentÂ withÂ theÂ followingÂ information:Â departmentÂ number,Â departmentÂ name,Â theÂ manager'sÂ employeeÂ number,Â lastÂ name,Â firstÂ name.
 
-#### Data Analysis
+4.Â ListÂ theÂ departmentÂ ofÂ eachÂ employeeÂ withÂ theÂ followingÂ information:Â employeeÂ number,Â lastÂ name,Â firstÂ name,Â andÂ departmentÂ name.
 
-Once you have a complete database, do the following:
+5.Â ListÂ firstÂ name,Â lastÂ name,Â andÂ sexÂ forÂ employeesÂ whoseÂ firstÂ nameÂ isÂ "Hercules"Â andÂ lastÂ namesÂ beginÂ withÂ "B."
 
-1. List the following details of each employee: employee number, last name, first name, sex, and salary.
+6.Â ListÂ allÂ employeesÂ inÂ theÂ SalesÂ department,Â includingÂ theirÂ employeeÂ number,Â lastÂ name,Â firstÂ name,Â andÂ departmentÂ name.
 
-2. List first name, last name, and hire date for employees who were hired in 1986.
+7.Â ListÂ allÂ employeesÂ inÂ theÂ SalesÂ andÂ DevelopmentÂ departments,Â includingÂ theirÂ employeeÂ number,Â lastÂ name,Â firstÂ name,Â andÂ departmentÂ name.
 
-3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
+8.Â InÂ descendingÂ order,Â listÂ theÂ frequencyÂ countÂ ofÂ employeeÂ lastÂ names,Â i.e.,Â howÂ manyÂ employeesÂ shareÂ eachÂ lastÂ name.
 
-4. List the department of each employee with the following information: employee number, last name, first name, and department name.
+##Â BonusÂ (Optional)
 
-5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
 
-6. List all employees in the Sales department, including their employee number, last name, first name, and department name.
 
-7. List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
+2.Â CreateÂ aÂ histogramÂ toÂ visualizeÂ theÂ mostÂ commonÂ salaryÂ rangesÂ forÂ employees.
 
-8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
+3.Â CreateÂ aÂ barÂ chartÂ ofÂ averageÂ salaryÂ byÂ title.
 
-## Bonus (Optional)
+##Â Epilogue
 
-As you examine the data, you are overcome with a creeping suspicion that the dataset is fake. You surmise that your boss handed you spurious data in order to test the data engineering skills of a new employee. To confirm your hunch, you decide to take the following steps to generate a visualization of the data, with which you will confront your boss:
+EvidenceÂ inÂ hand,Â youÂ marchÂ intoÂ yourÂ boss'sÂ officeÂ andÂ presentÂ theÂ visualization.Â WithÂ aÂ slyÂ grin,Â yourÂ bossÂ thanksÂ youÂ forÂ yourÂ work.Â OnÂ yourÂ wayÂ outÂ ofÂ theÂ office,Â youÂ hearÂ theÂ words,Â "SearchÂ yourÂ IDÂ number."Â YouÂ lookÂ downÂ atÂ yourÂ badgeÂ toÂ seeÂ thatÂ yourÂ employeeÂ IDÂ numberÂ isÂ 499942.
+HAPPY APRIL FOOL IN NOVEMBER-
 
-1. Import the SQL database into Pandas. (Yes, you could read the CSVs directly in Pandas, but you are, after all, trying to prove your technical mettle.) This step may require some research. Feel free to use the code below to get started. Be sure to make any necessary modifications for your username, password, host, port, and database name:
+CONTENT OF THIS PROJECT
 
-   ```sql
-   from sqlalchemy import create_engine
-   engine = create_engine('postgresql://localhost:5432/<your_db_name>')
-   connection = engine.connect()
-   ```
+*Â Imnage file of ERD.
+*Â Â .sql`Â fileÂ withÂ queries.
 
-* Consult [SQLAlchemy documentation](https://docs.sqlalchemy.org/en/latest/core/engines.html#postgresql) for more information.
-
-* If using a password, do not upload your password to your GitHub repository. See [https://www.youtube.com/watch?v=2uaTPmNvH0I](https://www.youtube.com/watch?v=2uaTPmNvH0I) and [https://help.github.com/en/github/using-git/ignoring-files](https://help.github.com/en/github/using-git/ignoring-files) for more information.
-
-2. Create a histogram to visualize the most common salary ranges for employees.
-
-3. Create a bar chart of average salary by title.
-
-## Epilogue
-
-Evidence in hand, you march into your boss's office and present the visualization. With a sly grin, your boss thanks you for your work. On your way out of the office, you hear the words, "Search your ID number." You look down at your badge to see that your employee ID number is 499942.
-
-## Submission
-
-* Create an image file of your ERD.
-
-* Create a `.sql` file of your table schemata.
-
-* Create a `.sql` file of your queries.
-
-* (Optional) Create a Jupyter Notebook of the bonus analysis.
-
-* Create and upload a repository with the above files to GitHub and post a link on BootCamp Spot.
-
-* Ensure your repository has regular commits (i.e. 20+ commits) and a thorough README.md file
-
-### Copyright
-
-Trilogy Education Services © 2019. All Rights Reserved.
-
+*Â JupyterÂ NotebookÂ with visualizations .
 
