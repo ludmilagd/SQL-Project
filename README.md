@@ -1,7 +1,8 @@
 
-SQL Challenge 
+### SQL Project 
 
-Objective: Research projects of Pewlett Hackard  from 1980 to 2000 and analyze data to answer questions below. 
+## Objective: 
+Research projects of Pewlett Hackard  from 1980 to 2000 and analyze data. 
 
 Data modeling diagram with the relationship between the tables in the database
 
